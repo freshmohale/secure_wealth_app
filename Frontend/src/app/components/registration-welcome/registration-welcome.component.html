@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<section class="container mx-auto p-4">
+    <div class = "welcome" *ngIf="currentUser">
+
+   <img class="w-10 h-10 mr-4" src="https://img.icons8.com/?size=512&id=33100&format=png" alt=""><h2 class="text-3xl font-bold mb-4"> Hello, {{currentUser.user.firstName | uppercase}} {{currentUser.user.lastName | uppercase}}</h2>
+    </div>
+    <div class="about-section flex items-center my-8">
+      <img class="w-12 h-32 mr-4" src="https://ouch-cdn2.icons8.com/JmZ-OmMF8J2rZDS6d95snu0cLN_mkw5sOsuJT-AUIm8/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMzg4/LzcwYmI3OWRhLTkz/ZTctNGQ0YS05MGY1/LTk0YTNlY2QzOWM5/ZC5zdmc.png" alt="">
+      <div>
+        <p class="text-4xl font-bold leading-tight">
+          Let's kickstart,<br>
+          your wealth<br>
+          journey. . .
+        <p>
+      </div>
+    </div>
+
+    <div class ="hand">
+  
+    <p class="text-xl  text-gray-800">  Asibangene with questions to complete your profile and get customized recommendations! <img class="w-8 h-8 mr-4" src="https://img.icons8.com/?size=512&id=17661&format=png" alt=""> 
+    </p>
+</div>
+  </section>
+  <div class="button">
+    <button class="btn btn-continue">
+        <div class="continue" routerLink="/survey" >Continue</div></button>
+
+  </div>
+ 
+  
+ 

@@ -1,0 +1,163 @@
+<!-- Navbar -->
+<nav>
+  <!-- Updated color class to "bg-red-500" -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a class="logo" href="#"
+          ><img
+            src="https://cdn.discordapp.com/attachments/1093145146134106172/1131201355218952263/Secure_Legacy__1_-removebg-preview.png"
+        /></a>
+      </div>
+
+      <!-- Hamburger menu (mobile) -->
+      <div class="flex items-center sm:hidden">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none focus:bg-red-500 focus:text-white border"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          (click)="toggleMobileMenu()"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Hamburger icon -->
+          <svg
+            *ngIf="!isMobileMenuOpen"
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <!-- X (Cross) icon -->
+          <svg
+            *ngIf="isMobileMenuOpen"
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden sm:block">
+        <div class="flex space-x-4" id="info-tabs">
+          <!-- Menu items -->
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+            >Profile</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+            >Help</a
+          >
+          <div *ngIf="!isLoggedIn">
+            <a
+              class="text-black bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              routerLink="/login"
+              >Login</a
+            >
+          </div>
+          <div *ngIf="isLoggedIn">
+            <a
+              class="text-black bg-white hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              (click)="signout()"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div
+    [ngClass]="{ hidden: !isMobileMenuOpen }"
+    class="sm:hidden"
+    id="mobile-menu"
+  >
+    <div class="px-2 pt-2 pb-3 space-y-1" id="small-text">
+      <!-- Menu items -->
+      <div *ngIf="isLoggedIn">
+        <a
+          class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+          routerLink="/home"
+          ><img src="https://img.icons8.com/?size=54&id=73&format=png" />Home</a
+        >
+      </div>
+      <a
+        routerLink="/learn"
+        class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+        ><img
+          src="https://img.icons8.com/?size=54&id=VuNO5eSHIj35&format=png"
+        />Useful Tools</a
+      >
+      <hr />
+      <a
+        href="#"
+        class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+        ><img src="https://img.icons8.com/?size=54&id=77&format=png" />About
+        Us</a
+      >
+      <hr />
+      <a
+        href="#"
+        class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+        ><img src="https://img.icons8.com/?size=54&id=9659&format=png" />Contact
+        Us</a
+      >
+      <hr />
+      <a
+        href="#"
+        class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+        ><img src="https://img.icons8.com/?size=54&id=646&format=png" />Help</a
+      >
+      <hr />
+      <div *ngIf="!isLoggedIn">
+        <a
+          class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+          routerLink="/login"
+          ><img
+            src="https://img.icons8.com/?size=54&id=2445&format=png"
+          />Login</a
+        >
+        <hr />
+      </div>
+      <div *ngIf="isLoggedIn">
+        <a
+          class="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium bg-white"
+          (click)="signout()"
+          ><img
+            src="https://img.icons8.com/?size=54&id=2445&format=png"
+          />Logout</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

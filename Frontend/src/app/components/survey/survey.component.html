@@ -1,0 +1,397 @@
+<app-navbar></app-navbar>
+<button
+  *ngIf="!hidden"
+  mat-raised-button
+  (click)="isLinear = !isLinear"
+  id="toggle-linear"
+>
+  {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
+</button>
+
+<mat-stepper
+  [linear]="isLinear"
+  #stepper
+  class="custom-stepper"
+  class="questionForm"
+>
+  <form>
+    <!-- 1 Physically Demanding-->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="number">
+            <h3>1 of 5</h3>
+          </div>
+          <div class="info-text">
+            <h4>
+              DISABILITY By understanding your occupation, we can provide you
+              with information about the level of coverage and benefits on
+              financial protection, in case you are unable to work due to an
+              accident or illness.
+            </h4>
+            <h2>
+              <b
+                >Do you have a physically demanding job or engage in risky
+                activities where there's a higher chance of injury or
+                disability?</b
+              >
+            </h2>
+          </div>
+
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="firstCtrl"
+            required
+          >
+            <mat-radio-button
+              [(ngModel)]="userAnswers.physically_demanding_job"
+              name="physically_demanding_job"
+              value="true"
+              >Yes</mat-radio-button
+            >
+            <br />
+            <mat-radio-button
+              [(ngModel)]="userAnswers.physically_demanding_job"
+              name="physically_demanding_job"
+              value="false"
+              >No</mat-radio-button
+            >
+          </mat-radio-group>
+          <input matInput />
+        </mat-form-field>
+        <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- 2 Dependents -->
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="number">
+            <h3>2 of 5</h3>
+          </div>
+          <div class="info-text">
+            <h4>
+              Life Cover
+            </h4>
+            <h2>
+              <b
+                >Do you have dependents who rely on your financial support?</b
+              >
+            </h2>
+          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="secondCtrl"
+            required
+          >
+            <mat-radio-button
+              [(ngModel)]="userAnswers.has_dependents"
+              name="has_dependents"
+              value="true"
+              >Yes</mat-radio-button
+            >
+            <br />
+            <mat-radio-button
+              [(ngModel)]="userAnswers.has_dependents"
+              name="has_dependents"
+              value="false"
+              >No</mat-radio-button
+            >
+          </mat-radio-group>
+
+          <input matInput />
+        </mat-form-field>
+        <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- 3 Retirement-->
+    <mat-step [stepControl]="thirdFormGroup" label="Fill out your address">
+      <form [formGroup]="thirdFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="number">
+            <h3>3 of 5</h3>
+          </div>
+          <div class="info-text">
+            <h4>
+              Retirement .
+            </h4>
+            <h2>
+              <b
+                >Are you looking for a retirement plan that provides tax benefits and potentially higher returns than traditional savings accounts?</b
+              >
+            </h2>
+          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="thirdCtrl"
+            required
+          >
+            <mat-radio-button
+              [(ngModel)]="userAnswers.retirement_plan_with_tax_benefits"
+              name="retirement_plan_with_tax_benefits"
+              value="true"
+              >Yes</mat-radio-button
+            >
+            <br />
+            <mat-radio-button
+              [(ngModel)]="userAnswers.retirement_plan_with_tax_benefits"
+              name="retirement_plan_with_tax_benefits"
+              value="false"
+              >No</mat-radio-button
+            >
+          </mat-radio-group>
+          <!-- <mat-label>Address</mat-label> -->
+          <input matInput />
+        </mat-form-field>
+        <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- 4 Financial Goals-->
+
+    <mat-step [stepControl]="forthFormGroup" label="Fill out your address">
+      <form [formGroup]="forthFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="number">
+            <h3>4 of 5</h3>
+          </div>
+          <div class="info-text">
+            <h4>
+              INVESTMENTS 
+            </h4>
+            <h2>
+              <b
+                >Do you have specific financial goals, such as buying a house, funding a child's education, or building a retirement nest egg?</b
+              >
+            </h2>
+          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="forthCtrl"
+            required
+          >
+            <mat-radio-button
+              [(ngModel)]="userAnswers.specific_financial_goals"
+              name="specific_financial_goals"
+              value="true"
+              >Yes</mat-radio-button
+            >
+            <br />
+            <mat-radio-button
+              [(ngModel)]="userAnswers.specific_financial_goals"
+              name="specific_financial_goals"
+              value="false"
+              >No</mat-radio-button
+            >
+          </mat-radio-group>
+
+          <input matInput />
+        </mat-form-field>
+        <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- 5 Child Education-->
+    <mat-step [stepControl]="fifthFormGroup" label="Fill out your address">
+      <form [formGroup]="fifthFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="number">
+            <h3>5 of 5</h3>
+          </div>
+          <div class="info-text">
+            <h4>
+              EDUCANTIONAL TRUST
+            </h4>
+            <h2>
+              <b
+                >Do you want to set aside funds specifically for yourself or your child's educational needs?</b
+              >
+            </h2>
+          </div>
+          <mat-radio-group
+            aria-label="Select an option"
+            formControlName="fifthCtrl"
+            required
+          >
+            <mat-radio-button
+              [(ngModel)]="userAnswers.planning_for_child_education"
+              name="planning_for_child_education"
+              value="true"
+              >Yes</mat-radio-button
+            >
+            <br />
+            <mat-radio-button
+              [(ngModel)]="userAnswers.planning_for_child_education"
+              name="planning_for_child_education"
+              value="false"
+              >No</mat-radio-button
+            >
+          </mat-radio-group>
+          <input matInput />
+        </mat-form-field>
+        <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext type="submit" (click)="DONE()">
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- 6 View Recommendations -->
+    <mat-step>
+      <div class="finalCard">
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="Complete-image">
+          <img
+            src="https://cdn.discordapp.com/attachments/1118162261240971307/1136623096275685417/flame-1837.png"
+          />
+        </div>
+        <div class="Complete-Page">
+          <h1>Baie Dankie, Bosele!</h1>
+          <h2>
+            High five for learning with our app! Take a look at the personalized
+            recommendations
+          </h2>
+        </div>
+        <button class="complete-survey" mat-button matStepperNext>
+          View Recommendations
+        </button>
+        <div class="retake">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Retake Survey</button>
+        </div>
+      </div>
+    </mat-step>
+
+    <!-- 7 Recommendations -->
+    <mat-step
+      [stepControl]="sixthFormGroup"
+      label="Fill out your address"
+      *ngIf="recommendations.length > 0"
+    >
+      <form [formGroup]="sixthFormGroup">
+        <mat-form-field class="firstCard">
+          <div *ngIf="!select">
+            <div class="info-text" *ngFor="let product of recommendations">
+              <a
+                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+                style="background-color: #ff5c53"
+              >
+                <h1
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  {{ product.title }}
+                </h1>
+                <p
+                  class="font-normal text-gray-700 dark:text-white"
+                  id="view-prod"
+                  (click)="selectProduct(product)"
+                  matStepperNext
+                >
+                  View This Product
+                </p>
+              </a>
+              <br />
+            </div>
+          </div>
+          <div *ngIf="select" class="selected">
+            <!-- <button class="complete-survey" mat-button (click)="getThisProduct(this.selectedProduct.title)" >
+              Get This Product
+            </button> -->
+            <br>
+            <br>
+            <div class="mybackbtn">
+              <button mat-button (click)="clearSelect()"><img width="24" height="24" src="https://img.icons8.com/plumpy/24/000000/back--v1.png" alt="back--v1"/></button>
+            </div>
+      
+            <h2>{{ this.selectedProduct.title }}</h2>
+            <h3>{{ this.selectedProduct.explanation }}</h3>
+            <br>
+            <button class="complete-survey" mat-button (click)="getThisProduct(this.selectedProduct.title)" >
+              Get This Product
+            </button>
+            <!-- <button mat-button (click)="clearSelect()">Back</button> -->
+          </div>
+
+          <input matInput />
+        </mat-form-field>
+        <!-- <div class="btns">
+          <div class="btn-back">
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="btn-next">
+            <button mat-button matStepperNext type="submit">Next</button>
+          </div>
+        </div> -->
+      </form>
+    </mat-step>
+
+    <!-- 8 If No Recommendations Generated -->
+    <mat-step
+      [stepControl]="seventhFormGroup"
+      label="Fill out your address"
+      *ngIf="recommendations.length == 0"
+    >
+      <form [formGroup]="seventhFormGroup">
+        <mat-form-field class="firstCard">
+          <div class="info-text">
+            <a
+              class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+              style="background-color: #ff5c53"
+            >
+              <h1
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                No Recommendations Generated
+              </h1>
+              <p
+                class="font-normal text-gray-700 dark:text-white"
+                id="view-prod"
+              >
+                Please Retake Survey Or Try Again Later
+              </p>
+            </a>
+            <br />
+          </div>
+
+          <input matInput />
+        </mat-form-field>
+      </form>
+    </mat-step>
+  </form>
+</mat-stepper>

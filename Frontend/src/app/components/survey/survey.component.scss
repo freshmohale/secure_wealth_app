@@ -1,0 +1,180 @@
+// Use This For ng material
+//   :host {
+//     ::ng-deep {
+//       }
+//   }
+
+:host {
+  ::ng-deep {
+    .mat-horizontal-stepper-header-container.ng-tns-c89-0.ng-star-inserted {
+      display: none;
+    }
+
+    .firstCard {
+      margin-top: 2rem;
+    }
+
+    .btns button {
+      background-color: #ff5c53;
+      width: 5rem;
+      border-radius: 1rem;
+      color: white;
+      margin-bottom: 1;
+      height: 2rem;
+    }
+    .btn-next {
+      position: relative;
+      right: -15rem;
+      top: -2rem;
+    }
+    .btn-back {
+      margin-left: 1rem;
+    }
+    mat-radio-button {
+      border: solid 1px;
+      padding: 1rem;
+      width: 19rem;
+      margin-left: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+    .number {
+      margin-left: 9.3rem;
+      margin-bottom: 3rem;
+      margin-top: -5rem;
+    }
+    .questionForm form {
+      margin-top: 5rem;
+      border: solid 1px;
+      border-radius: 1rem;
+    }
+
+    #view-prod {
+      color: black;
+      height: 2.5rem;
+      padding: 0.8rem;
+      border-radius: 1rem;
+      text-align: center;
+      background-color: white;
+    }
+
+    .info-text {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .mat-form-field-underline {
+      display: none;
+    }
+
+    .mat-input-element {
+      display: none;
+    }
+
+    .finalCard {
+      margin-top: 5rem;
+    }
+  
+    .selected{
+      
+        height: 35rem;
+        width: 23rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: -1rem;
+        background-color: white;
+        margin-top: -5rem;
+        margin-bottom: -5rem;
+        position: relative;
+        top: -4rem;
+        margin-bottom: -6rem;
+        padding-bottom: 1.25em;
+        padding-left: 1rem;
+        background-color: white;
+        height: 100%;
+        width: 24rem;
+        margin-left: -1rem;
+
+       .mybackbtn{
+          .mat-button .mat-button-wrapper>*, .mat-flat-button .mat-button-wrapper>*, .mat-stroked-button .mat-button-wrapper>*, .mat-raised-button .mat-button-wrapper>*, .mat-icon-button .mat-button-wrapper>*, .mat-fab .mat-button-wrapper>*, .mat-mini-fab .mat-button-wrapper>* {
+            vertical-align: middle;
+            position: relative;
+            top: -3.5rem;
+            left: -1.5rem;
+        }
+        }
+
+        .firstCard[_ngcontent-uhr-c107] {
+          width: 342px;
+          background-color: yellow;
+          margin-left: 0rem;
+          height: 28rem;
+      }
+
+      .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        margin-bottom: -14rem;
+        padding-bottom: 1.25em;
+        padding-left: 1rem;
+        background-color: white;
+        height: 100vh;
+        width: 24rem;
+        margin-left: -1rem;
+    }
+
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+      padding-bottom: 1.25em;
+      background-color: white;
+      margin-left: -1rem;
+      padding-left: 1rem;
+      margin-bottom: -24rem;
+  }
+    }
+
+    @media (max-width: 640px) {
+      .complete-survey {
+        background-color: #ff5c53;
+        margin-left: 54px;
+        margin-top: 1.5rem;
+        width: 15rem;
+        height: 2.8rem;
+        color: white;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        padding-bottom: 5px;
+        font-weight: bold;
+      }
+    }
+
+    .Complete-Page {
+      text-align: center;
+      h1 {
+        font-size: larger;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: large;
+        font-size: 1.2rem;
+      }
+    }
+
+    .Complete-image img {
+      margin-left: 5rem;
+      width: 12rem;
+    }
+
+    .retake {
+      margin-left: 70px;
+    }
+
+    
+  }
+}
+
+.firstCard {
+  width: 342px;
+}

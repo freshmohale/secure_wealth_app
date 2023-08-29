@@ -1,0 +1,36 @@
+.container {
+  margin-top: 4rem;
+  justify-content: center;
+
+  .search-form {
+    margin-top: 3rem;
+    width: 20rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .text {
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  form #btnsearch {
+    background-color: #ff5c53;
+    border-radius: 2rem;
+  }
+
+  form input {
+    border-radius: 2rem;
+    color: black;
+  }
+
+  .explain {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    word-spacing: 2px;
+    font-weight: lighter;
+  }
+}

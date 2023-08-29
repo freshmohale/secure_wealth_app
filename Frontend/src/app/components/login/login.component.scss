@@ -1,0 +1,114 @@
+.container {
+  margin-top: -3rem;
+  width: 100%;
+}
+#device-bg {
+  background-color: #f6f6f6;
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  #frm-cont {
+    background-color: #f6f6f6;
+    border: none;
+    height: 92vh;
+  }
+  #namesfrm input {
+    width: 9rem;
+  }
+
+  #reg-btn {
+    margin-left: 70px;
+    margin-top: 1.5rem;
+    width: 10rem;
+    height: 2.8rem;
+  }
+
+  #google-btn {
+    width: 15rem;
+    height: 2rem;
+    margin-left: 30px;
+  }
+
+  #frm {
+    margin-top: 6rem;
+  }
+
+  #logo {
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .welcome {
+    h1 {
+      text-align: center;
+      font-size: 1.7rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+#google-btn {
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, 0);
+  height: 2rem;
+  width: 15rem;
+  margin-left: 4.7rem;
+  margin-top: 6px;
+}
+
+#frm input {
+  background-color: white;
+  border-style: solid;
+  border-radius: 1rem;
+}
+#reg-btn {
+  border-radius: 25px;
+  background: #ff5c53;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.welcome {
+  justify-content: center;
+}
+#google-btn img {
+  position: relative;
+  top: -0.22rem;
+}
+
+#google-btn h3 {
+  position: relative;
+  top: -1.5rem;
+}
+
+#logo {
+  justify-content: center;
+}
+
+.welcome {
+  h1 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.alert {
+  color: red;
+}
+
+.relative[_ngcontent-umr-c52] {
+  height: 109vh;
+  box-shadow: none;
+}
+
+.md\:h-screen {
+  height: 103vh;
+  margin-top: -4rem;
+}

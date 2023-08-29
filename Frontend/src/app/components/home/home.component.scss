@@ -1,0 +1,129 @@
+// *{
+//     background-color: #F6F6F6;
+//     height: 92vh;
+// }
+
+.rousel{
+    height: 80%;
+    
+}
+
+.itemss img{
+    width: 10rem;
+    height: 10rem;
+    // margin-left: 1rem;
+}
+
+.itemss{
+    display: flex;
+    margin-top: 3.4rem;
+    width: 16.5rem;
+    border: solid 1px;
+    margin-left: 4rem;
+}
+#reg-btn{
+   
+    border-radius: 22px;
+    background: #FF5C53;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+
+    @media (max-width: 640px) {
+        #reg-btn {
+            justify-content: center;
+            margin-top: 2.8rem;
+            width: 12rem;
+            height: 2rem;
+            margin-left: 6rem;
+            margin-bottom: -5rem;
+        }
+      }
+    
+    //   @media (max-width: 640px) {
+    //     #reg-btn button {
+            
+    //     }
+    //   }
+
+      .text-sm{
+        margin-top: -5px;
+      }
+
+      @media (max-width: 640px) {
+        .cover-info h1{
+           margin-top: 2.5rem;
+           font-weight: bold;
+           font-size: 1.1rem;
+           margin-bottom: -1rem;
+        }
+      }
+    
+      footer{
+        background-color: #FF5C53;
+        text-align: left;
+        // position: fixed;
+        margin-top: -13rem;
+        position: inherit;
+        width: 100%;
+        bottom: 0;
+      }
+      
+      .subject{
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        
+      }
+      
+      .define{
+        font-size: 18px;
+        color: white;
+      
+      }
+      
+      .slogan{
+        font-style: italic;
+        color: white;
+      }
+      
+      .copyright-f{
+        color: white;
+      }
+
+
+    //   @media (max-width: 640px) {
+    //     #info-text h3{
+    //      font-size: 1.3rem;
+    //     }
+    //   }
+    
+    
+      
+      @media (min-width: 1024px) {
+        .rousel{
+            height: 90%;
+            
+        }
+        
+        .itemss img{
+            width: 35rem;
+            height: 20rem;
+            // margin-left: 1rem;
+        }
+        
+        .itemss{
+            display: flex;
+            margin-top: 3.4rem;
+            width: 80rem;
+            border: solid 1px;
+            margin-left: 4rem;
+        }
+
+        .cover-info h1{
+            margin-top: 5.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+         }
+      }

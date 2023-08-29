@@ -1,0 +1,123 @@
+<section class="bg-gray-50" id="device-bg">
+  <div
+    class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+  >
+    <div
+      class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-white dark:border-white"
+      id="frm-cont"
+    >
+      <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <form
+          class="space-y-4 md:space-y-6"
+          action="#"
+          id="frm"
+          *ngIf="!isLoginFailed"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <a
+            class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+            id="logo"
+          >
+            <img
+              class="w-40 h-18 mr-2"
+              src="https://cdn.discordapp.com/attachments/1118162261240971309/1131896160475426836/image.png"
+              alt="logo"
+            />
+          </a>
+          <div class="welcome">
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black"
+            >
+              Hello, Please login
+            </h1>
+            <br />
+            <p></p>
+            <p></p>
+          </div>
+
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Email Address"
+              [(ngModel)]="form.email"
+              required
+              #email="ngModel"
+            />
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="email.errors && f.submitted"
+            >
+              <div *ngIf="email.errors?.['required']">Email is required</div>
+            </div>
+          </div>
+          <div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              [(ngModel)]="form.password"
+              required
+              minlength="8"
+              #password="ngModel"
+            />
+            <div
+              id="pass-alert"
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="password.errors && f.submitted"
+            >
+              <div *ngIf="password.errors?.['required']">
+                Password is required
+              </div>
+              <div *ngIf="password.errors?.['minlength']">
+                Password must be at least 8 characters
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center" id="reg-btn">
+            <button
+              type="submit"
+              class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            >
+              LOGIN
+            </button>
+          </div>
+          <!-- This Will Be Un-commented Once Google OAuth Is Complete -->
+          <!-- <div class="flex justify-center gap-2">
+                        <h1>-</h1><p> or continue with </p><h1>-</h1>
+                    </div>
+                    <div class="flex items-start justify-center justify-between" id="google-btn">
+                        <button type="button" class="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            <img src="https://img.icons8.com/?size=20&id=17949&format=png"> <h3>Continue with Google</h3> </button>
+                    </div> -->
+          <div class="flex justify-center">
+            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+              Don't have an account?
+            </p>
+          </div>
+          <div
+            class="flex justify-center"
+            style="margin-top: -0.1rem; color: #ff5c53"
+          >
+            <p>
+              <a
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                routerLink="/register"
+                >Register here</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

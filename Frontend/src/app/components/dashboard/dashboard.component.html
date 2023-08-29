@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<!-- <div >
+<h1>Hello {{currentUser.user.firstName}}</h1>
+<h1>Hello {{currentUser.user.email}}</h1>
+<h1>Hello {{currentUser.name}}</h1>
+</div> -->
+<div class="card">
+    <div class="circle-container bg-gray-100">
+        <!-- <div class="circle circle-top-right"></div>
+        <div class="circle circle-bottom-left"></div> -->
+    </div>
+    
+    <h1 class="welcome" *ngIf="currentUser">
+        Welcome back, <br> {{currentUser.user.firstName | uppercase}}
+    </h1>
+    
+    <div class="container mx-auto py-8">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-4 metric-card" style="cursor: auto;">
+                <img class="rounded-t-lg w-full h-32 object-cover" src="https://ouch-cdn2.icons8.com/bB9hky9CPq16bIhx-ro1MVVVJCIRnc-Al_lUGQL4HT4/rs:fit:256:171/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMjE1/L2EzY2YzODM4LWYy/MWMtNDM1Mi1hYzAx/LTQ1NGQ4Y2MxMzA4/NS5zdmc.png" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">View Results</h2>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-4 metric-card" style="cursor: auto;">
+                <img class="rounded-t-lg w-full h-32 object-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACGCAMAAAAvpwKjAAAAY1BMVEX///8AAADV1dXDw8P8/Pzr6+sEBATv7+9gYGDIyMiGhob29vbQ0NDn5+eXl5f5+fmdnZ01NTXe3t4/Pz8XFxd7e3tEREQPDw8uLi6rq6u4uLglJSVJSUlWVlZbW1uNjY1ycnL4tlJRAAAB90lEQVR4nO2Y23qqMBBGM5iQKOe0YMV6eP+nLJHubqwQdX9k2P36rxsFL1zMJMNMhAAAAAAAAAAAAAAAAADwA5HaRpHVckEDIbLcvLwSvb6YPOtuLCOTGhpg0kUkVO3+PO4dLh+14naQwjZ0Q2MFc17sluL4WqK73lpei+ztKx9DEXrLGCVkYUYkLh6mYEuLFLsxh95jx7c8irGM/NkxBZfFdDAcOy4LaXwahispmc+CiGuzrKdWRs+aSaP0a5RMGhufRkwbNg0vv0zDWzb41kbq1+Bqf9TWq8HV/PwfVVSK1qfR8r1i99MWey6HDk84WkYNUU8V0prTQuj3cYt3zaohVPW9A3NXFfukosy1hxsXDLdFN64mJQ1E3JcyWWSMtVfvuI0blZYZpnVbH5qqag51y7w2h7hnT7RSOhFLBWJ5Ls+tbLr6Rmr1188cJGl+rPY3dTTeV8dTmnAYdDtS5SNHG39pclc9goakk9Ann0PPSYctIF2rUd1RuKSqCvyeze+HoicPpiBFcX7UguhciDBHDHK6y7hNTUznUMu0fDwWjkDzSvScBVEUwiI5PpySTw4hKtn62WCEOOmQwjsjjWPmX6XaPzGOsp2/CVk9b0G0ml3jzmnCOPMfTj5cxofMX9Kz6B/gPMgHAAAAAAAAAAAAAAAA8DwfhdQSKrcsN+cAAAAASUVORK5CYII=" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">Profile</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full" routerLink="/survey">
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-4 metric-card" style="cursor: auto;">
+                <img class="rounded-t-lg w-full h-32 object-cover" src="https://ouch-cdn2.icons8.com/MCyp_v4rZjd79fZK_ostNQnol2ray5oePAFVdhrbY0I/rs:fit:256:203/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNzk3/Lzc2MTUyZjQzLWY1/NDctNGM1Zi1iOTZi/LTYzY2M2ODk0Nzg1/MC5wbmc.png" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">Re-Take Survey</h2>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white shadow-lg rounded-lg p-4 metric-card" style="cursor: auto;" routerLink="/learn">
+                <img class="rounded-t-lg w-full h-32 object-cover" src="https://ouch-cdn2.icons8.com/nDM0-LVSiT0eytjNwnY1337ubIAk2UnCho9Wdd1bySk/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDIx/LzJlNjQzNzNiLTEz/ZjgtNGNlZi1hMGM3/LWIxNzgyMDhkNmRj/OS5wbmc.png" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">Learn</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
