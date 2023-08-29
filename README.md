@@ -1,4 +1,4 @@
-# secure-legacy
+# secure-wealth
 
 ### Dockerfile Backend Tested
 ### Docker File For Frontend incomplete (testing) - network issues
